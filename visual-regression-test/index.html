@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Regression Screenshots Tester</title>
+	<style>
+		.list {
+			line-height: 1.4;
+			list-style-type: none;
+		}
+		.list--item {}
+		.list--item__failed {
+			color: #c0392b;
+		}
+		.list--item__passed {
+			color: #27ae60;
+		}
+
+		.status {
+			text-align: center;
+			font-size: 2em;
+		}
+		.status--item {
+			display: none;
+		}
+		.status--item__actual {
+			display: inline-block;
+		}
+		.status--item__done {
+			color: #27ae60;
+		}
+	</style>
+</head>
+<body>
+
+	<h1>Regression Screenshots Tester</h1>
+
+	<ul class="list">
+		<li class="list--item__failed" id="refExtras">Reference extra images:</li>
+		<li class="list--item__failed" id="testExtras">Tested extra images:</li>
+	</ul>
+
+	<ul class="list">
+		<li class="">Tested: <span id="testedCount">0</span></li>
+		<li class="list--item__passed">Passed: <span id="passedCount">0</span></li>
+		<li class="list--item__failed">Failed: <spna id="failedCount">0</span></li>
+	</ul>
+
+	<div class="status">
+		<span class="status--item status--item__actual">Working ...</span>
+		<span class="status--item status--item__done">Testing done</span>
+	</div>
+
+	<div id="diffs"></div>
+
+
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/resmeblejs/resemble.js"></script>
+	<script src="main.js"></script>
+</body>
+</html>

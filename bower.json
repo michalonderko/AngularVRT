@@ -1,0 +1,10 @@
+{
+  "name": "AngularVRT",
+  "version": "0.0.0",
+  "description": "Visual regression testing angular apps",
+  "license": "MIT",
+  "devDependencies": {
+    "resemblejs": "~1.2.0",
+    "jquery": "~2.1.3"
+  }
+}
