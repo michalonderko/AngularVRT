@@ -1,0 +1,7 @@
+<h1>List of social networks</h1>
+
+<div ng-if="error">{{error}}</div>
+
+<ul ng-if="socials.length">
+  <li ng-repeat="social in socials"><a ng-href="{{social.link}}">{{social.name}}</a></li>
+</ul>

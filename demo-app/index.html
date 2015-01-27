@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="DemoApp" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Demo AngularJS App</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/all.css">
+</head>
+<body>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="#/list">List</a></li>
+  </ul>
+
+  <div ng-view></div>
+
+  <script src="libs/angular.js"></script>
+  <script src="libs/angular-route.js"></script>
+  <script src="libs/angular-mocks.js"></script>
+  <script src="src/app.js"></script>
+  <script src="src/homepage/homepage-ctrl.js"></script>
+  <script src="src/list/list-ctrl.js"></script>
+</body>
+</html>

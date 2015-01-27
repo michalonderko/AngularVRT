@@ -11,6 +11,8 @@
   },
   "scripts": {
 
+    "start": "http-server demo-app -a localhost -p 8234 -s -c-1",
+
     "test": "http-server visual-regression-test -a localhost -p 8999 -o -s -c-1"
   }
 }
