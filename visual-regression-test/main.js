@@ -107,7 +107,8 @@ $(document).ready(function() {
 			}
 			compareLists();
 		}).fail(function() {
-			console.error('Nepodarilo se nacist soubor ' + folder + LISTFILE);
+			console.error('I can\'t load file: ' + folder + LISTFILE);
+			$('.status--item__actual').text('I can\'t load file with list of images')
 		});
 	};
 

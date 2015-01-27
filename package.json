@@ -9,5 +9,8 @@
     "http-server": "^0.7.4",
     "protractor": "^1.6.1"
   },
-  "scripts": {}
+  "scripts": {
+
+    "test": "http-server visual-regression-test -a localhost -p 8999 -o -s -c-1"
+  }
 }
