@@ -20,7 +20,7 @@ bower install
 
 ## Run simple DemoApp
 
-For example there is prepared simple angularjs demo application. You can start it by:
+There is prepared simple angularjs demo application. You can start it by:
 
 ```
 npm start
@@ -38,7 +38,11 @@ This command runs some tasks:
 
 1. Remove `visual-regression-test/reference.json` and `visual-regression-test/test.json` which contain lists of screenshots to compare.
 2. Clear directory `visual-regression-test/imgs-test`.
-3. Updates webdriver.
-4. Runs protractor (e2e tests). It generates screenshots to directory `visual-regression-test/imgs-test`.
-5. Generates new `visual-regression-test/reference.json` and `visual-regression-test/test.json`.
-6. Runs application for visual regression testing.
+3. Update [Selenium Webdriver](http://docs.seleniumhq.org/projects/webdriver/).
+4. Run [Protractor](http://angular.github.io/protractor/) (e2e testing tool). It generates screenshots to directory `visual-regression-test/imgs-test`.
+5. Generate new `visual-regression-test/reference.json` and `visual-regression-test/test.json`.
+6. Run application for visual regression testing.
+
+## Workflow
+
+After first run of tests you may simple copy images from `visual-regression-test/imgs-test` to `visual-regression-test/imgs-reference`. If you modify your application, start tests again. Reggresion testing tool shows you all visual changes. So you can decide that changes are awaited or not (bugs). If you have only awaited diffs then copy images to `visual-regression-test/imgs-reference` (make it referenced).
