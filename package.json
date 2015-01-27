@@ -19,6 +19,6 @@
     "protractor": "protractor e2e-tests/protractor-conf.js",
     "regression": "http-server visual-regression-test -a localhost -p 8999 -o -s -c-1",
 
-    "test": "rm visual-regression-test/imgs-test/*; npm run update-webdriver; npm run protractor; npm run regression;"
+    "test": "rm visual-regression-test/*.json; rm visual-regression-test/imgs-test/*; npm run update-webdriver; npm run protractor; node lists-generator.js; npm run regression;"
   }
 }

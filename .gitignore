@@ -1,5 +1,7 @@
 /node_modules/
 /bower_components/
 /visual-regression-test/imgs-test/*.*
+/visual-regression-test/reference.json
+/visual-regression-test/test.json
 .DS_Store
 *.log

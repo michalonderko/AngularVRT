@@ -12,9 +12,10 @@ resemble.outputSettings({
 
 $(document).ready(function() {
 
-	var REFFOLDER = 'screenshots-reference/';
-	var TESTFOLDER = 'screenshots-test/';
-	var LISTFILE = 'list.json';
+	var REFFOLDER = 'imgs-reference/';
+	var TESTFOLDER = 'imgs-test/';
+	var LISTREF = 'reference.json';
+	var LISTTEST = 'test.json';
 
 	var refList = null;
 	var testList = null;
@@ -43,6 +44,10 @@ $(document).ready(function() {
 
 		var passedCount = 0;
 		var failedCount = 0;
+
+		if (!arr.length) {
+			$('.status .status--item').toggleClass('status--item__actual');
+		}
 
 		arr.forEach(function(elem, idx, arr) {
 			resemble(REFFOLDER + elem)
@@ -98,20 +103,20 @@ $(document).ready(function() {
 		}
 	};
 
-	var getLists = function(folder) {
-		$.getJSON(folder + LISTFILE, function(data) {
-			if (folder === REFFOLDER) {
+	var getLists = function(file) {
+		$.getJSON(file, function(data) {
+			if (file === LISTREF) {
 				refList = data;	
-			} else if (folder === TESTFOLDER) {
+			} else if (file === LISTTEST) {
 				testList = data;
 			}
 			compareLists();
 		}).fail(function() {
-			console.error('I can\'t load file: ' + folder + LISTFILE);
+			console.error('I can\'t load file: ' + file);
 			$('.status--item__actual').text('I can\'t load file with list of images')
 		});
 	};
 
-	getLists(REFFOLDER);
-	getLists(TESTFOLDER);
+	getLists(LISTREF);
+	getLists(LISTTEST);
 });
