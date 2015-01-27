@@ -10,6 +10,5 @@ describe('Homepage', function() {
     browser.waitForAngular();
 
     capture.takeScreenshot('homepage');
-    
   });
 });
