@@ -13,8 +13,6 @@
 
     "start": "http-server demo-app -a localhost -p 8234 -s -c-1",
 
-
-
     "update-webdriver": "webdriver-manager update",
     "protractor": "protractor e2e-tests/protractor-conf.js",
     "regression": "http-server visual-regression-test -a localhost -p 8999 -o -s -c-1",
