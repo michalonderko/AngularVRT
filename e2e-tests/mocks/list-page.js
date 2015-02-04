@@ -38,6 +38,8 @@ describe('List page', function() {
 
   it('Take list page screenshot', function() {
     // specific size of screenshot
-    capture.takeScreenshot('list-page-666x666', [666, 666]);
+    browser.driver.manage().window().setSize(666, 666).then(function() {
+      capture.takeScreenshot('list-page--666x666');
+    });
   });
 });
