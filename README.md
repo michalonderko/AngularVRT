@@ -18,7 +18,9 @@ npm install
 bower install
 ```
 
-## Run simple DemoApp
+## Run testing
+
+### Simple DemoApp
 
 There is prepared simple angularjs demo application. You can start it by:
 
@@ -26,7 +28,16 @@ There is prepared simple angularjs demo application. You can start it by:
 npm start
 ```
 
-## Run tests
+### Your application
+
+When you want test your own application, then edit `e2e-tests/protractor.conf`:
+
+```
+// write url address of your tested application
+baseUrl: 'http://localhost:8234/',
+```
+
+### Execute tests
 
 Simply type:
 
@@ -45,4 +56,4 @@ This command runs some tasks:
 
 ## Workflow
 
-After first run of tests you may simple copy images from `visual-regression-test/imgs-test` to `visual-regression-test/imgs-reference`. If you modify your application, start tests again. Reggresion testing tool shows you all visual changes. So you can decide that changes are awaited or not (bugs). If you have only awaited diffs then copy images to `visual-regression-test/imgs-reference` (make it referenced).
+After first run of tests you may simple copy images from `visual-regression-test/imgs-test` to `visual-regression-test/imgs-reference`. If you modify your application, start tests again. Reggresion testing tool shows you all visual changes. So you can decide that changes are awaited or not (bugs). If you have only awaited diffs then copy images to `visual-regression-test/imgs-reference` (make it reference).

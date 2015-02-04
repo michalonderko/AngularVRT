@@ -18,6 +18,7 @@ exports.config = {
     }
   },
 
+  // write url address of your tested application
   baseUrl: 'http://localhost:8234/',
 
   framework: 'jasmine',
