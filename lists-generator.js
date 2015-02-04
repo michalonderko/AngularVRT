@@ -6,6 +6,15 @@ lists.forEach(function(elm, idx, arr) {
 
 	console.log('Creating ' + elm + '.json');
 
-	var data = JSON.stringify(fs.readdirSync('visual-regression-test/imgs-' + elm));
-	fs.writeFileSync('visual-regression-test/' + elm + '.json', data);
+	var data = fs.readdirSync('visual-regression-test/imgs-' + elm);
+	var finalData = [];
+
+	data.forEach(function(elm, idx, arr) {
+		var patt = /\.png$/;
+		if (patt.test(elm)) {
+			finalData.push(elm);
+		}
+	});
+
+	fs.writeFileSync('visual-regression-test/' + elm + '.json', JSON.stringify(finalData));
 });
