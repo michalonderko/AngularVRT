@@ -9,6 +9,7 @@ describe('Homepage', function() {
     browser.get('/');
     browser.waitForAngular();
 
-    capture.takeScreenshot('homepage');
+    capture.takeScreenshot('homepage-DES', browser.params.sizes.DES);
+    capture.takeScreenshot('homepage-MOB', browser.params.sizes.MOB);
   });
 });

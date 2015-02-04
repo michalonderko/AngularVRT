@@ -35,6 +35,7 @@ describe('List page', function() {
   });
 
   it('Take list page screenshot', function() {
-    capture.takeScreenshot('list-page');
+    capture.takeScreenshot('list-page-DES', browser.params.sizes.DES);
+    capture.takeScreenshot('list-page-TAB', browser.params.sizes.TAB);
   });
 });
