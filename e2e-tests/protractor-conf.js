@@ -13,8 +13,8 @@ exports.config = {
   params: {
     'sizes': {
       'DES': [1200, 600], // desktop
-      'TAB': [800, 600],
-      'MOB': [320, 480]
+      'TAB': [800, 600],  // tablet
+      'MOB': [320, 480]   // cell phone
     }
   },
 

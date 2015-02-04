@@ -7,6 +7,8 @@ describe('List page', function() {
   beforeEach(function() {
 
     var httpBackendMock = function() {
+
+      // fake data
       angular.module('httpBackendMock', ['DemoApp', 'ngMockE2E'])
         .run(function($httpBackend) {
           $httpBackend.whenGET('/api/list').respond(
@@ -35,7 +37,7 @@ describe('List page', function() {
   });
 
   it('Take list page screenshot', function() {
-    capture.takeScreenshot('list-page-DES', browser.params.sizes.DES);
-    capture.takeScreenshot('list-page-TAB', browser.params.sizes.TAB);
+    // specific size of screenshot
+    capture.takeScreenshot('list-page-666x666', [666, 666]);
   });
 });
