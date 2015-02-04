@@ -18,7 +18,7 @@ npm install
 bower install
 ```
 
-## Run testing
+## Run tests
 
 ### Simple DemoApp
 
