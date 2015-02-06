@@ -7,6 +7,7 @@ exports.config = {
   ],
 
   capabilities: {
+    // 'browserName': 'chrome' // chrome doesn't make screenshots of whole page, but only by size of window
     'browserName': 'firefox'
   },
 
