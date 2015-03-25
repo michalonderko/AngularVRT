@@ -1,6 +1,6 @@
 'use strict';
 
-exports.takeScreenshot = function(name) {
+exports.takeScreenshot = function(name) { return;
 
   var fs = require('fs');
 

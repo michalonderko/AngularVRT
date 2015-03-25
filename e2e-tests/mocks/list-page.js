@@ -36,10 +36,8 @@ describe('List page', function() {
     browser.waitForAngular();
   });
 
-  it('Take list page screenshot', function() {
+  it('Window size 666x666', function() {
     // specific size of screenshot
-    browser.driver.manage().window().setSize(666, 666).then(function() {
-      capture.takeScreenshot('list-page--666x666');
-    });
+    browser.driver.manage().window().setSize(666, 666).then(function() {});
   });
 });
